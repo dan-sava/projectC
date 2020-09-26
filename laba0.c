@@ -8,8 +8,8 @@ main()
 {
   pid_t pid;
   int act;
-  switch(pid=fork()) {//
-  case -1:
+  switch(pid=fork()) {//поиск потомка
+  case -1://если потомок не найден
           perror("fork"); /* произошла ошибка */
           exit(1); /*выход из родительского процесса*/
   case 0:
